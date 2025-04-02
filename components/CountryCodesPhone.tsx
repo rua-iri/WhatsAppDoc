@@ -1215,7 +1215,6 @@ export function CountryCodesPhone() {
     },
   ];
 
-
   return (
     <>
       <Picker.Item label="Afghanistan (+93)" value="+93" />
@@ -1311,7 +1310,6 @@ export function CountryCodesPhone() {
       <Picker.Item label="Guadeloupe (+590)" value="+590" />
       <Picker.Item label="Guam (+1671)" value="+1671" />
       <Picker.Item label="Guatemala (+502)" value="+502" />
-      <Picker.Item label="Guernsey (+44)" value="+44" />
       <Picker.Item label="Guinea (+224)" value="+224" />
       <Picker.Item label="Guinea-Bissau (+245)" value="+245" />
       <Picker.Item label="Guyana (+595)" value="+595" />
@@ -1329,12 +1327,10 @@ export function CountryCodesPhone() {
       />
       <Picker.Item label="Iraq (+964)" value="+964" />
       <Picker.Item label="Ireland (+353)" value="+353" />
-      <Picker.Item label="Isle of Man (+44)" value="+44" />
       <Picker.Item label="Israel (+972)" value="+972" />
       <Picker.Item label="Italy (+39)" value="+39" />
       <Picker.Item label="Jamaica (+1876)" value="+1876" />
       <Picker.Item label="Japan (+81)" value="+81" />
-      <Picker.Item label="Jersey (+44)" value="+44" />
       <Picker.Item label="Jordan (+962)" value="+962" />
       <Picker.Item label="Kazakhstan (+77)" value="+77" />
       <Picker.Item label="Kenya (+254)" value="+254" />
