@@ -1,6 +1,13 @@
 import { Picker } from "@react-native-picker/picker";
 import { Formik } from "formik";
-import { Button, Linking, StyleSheet, TextInput, View } from "react-native";
+import {
+  Linking,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+  View,
+  Text,
+} from "react-native";
 import { CountryCodesPhone } from "./CountryCodesPhone";
 
 type SubmissionData = {
@@ -52,7 +59,12 @@ export function ContactForm() {
                 style={styles.numInput}
               />
             </View>
-            <Button onPress={() => handleSubmit()} title="Submit" />
+            <TouchableOpacity
+              style={styles.submitButton}
+              onPress={() => handleSubmit()}
+            >
+              <Text style={styles.submitButtonText}>Submit</Text>
+            </TouchableOpacity>
           </View>
         )}
       </Formik>
@@ -68,14 +80,25 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 3,
     padding: 2,
-    marginVertical: 10,
   },
   inputContainer: {
     display: "flex",
     borderWidth: 1,
     marginVertical: 10,
+    flexDirection: "row",
   },
   multiSelect: {
-    width: 200,
+    width: 150,
+  },
+  submitButton: {
+    backgroundColor: "rgb(41, 163, 55)",
+    borderRadius: 5,
+    alignItems: "center",
+    paddingVertical: 5,
+    borderWidth: 0.5,
+    borderColor: "rgba(0, 0, 0, 1)",
+  },
+  submitButtonText: {
+    color: "rgb(230, 230, 230)",
   },
 });
