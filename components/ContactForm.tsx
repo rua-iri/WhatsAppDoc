@@ -395,26 +395,29 @@ export function ContactForm() {
 
 const styles = StyleSheet.create({
   numInput: {
-    width: 150,
+    width: 300,
     height: 30,
     borderColor: "#202020",
     borderWidth: 2,
     borderRadius: 3,
     padding: 2,
+    marginVertical: 5,
   },
   inputContainer: {
     display: "flex",
-    borderWidth: 1,
     marginVertical: 10,
-    flexDirection: "row",
   },
   multiSelect: {
-    width: 150,
+    width: 300,
+    height: 60,
+    marginVertical: 5,
+    textAlign: "center",
   },
   submitButton: {
     backgroundColor: "rgb(41, 163, 55)",
-    borderRadius: 5,
+    borderRadius: 50,
     alignItems: "center",
+    marginVertical: 20,
     paddingVertical: 5,
     borderWidth: 0.5,
     borderColor: "rgba(0, 0, 0, 1)",

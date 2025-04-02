@@ -5,13 +5,10 @@ export function HeaderBar() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={[
-          "rgba(64,121,9,1)",
-          "rgba(41,163,56,1)",
-          "rgba(92,202,94,1)",
-          "transparent",
-        ]}
-        style={styles.background}
+        colors={["rgba(41,163,56,1)", "rgba(92, 202, 94, 0.91)", "transparent"]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 0, y: 1 }}
+        style={[StyleSheet.absoluteFill, styles.background]}
       >
         <Text style={styles.text}>WhatsAppDoc</Text>
       </LinearGradient>
@@ -35,7 +32,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
     padding: 20,
-    // borderBottomWidth: 1,
     zIndex: 1,
   },
   text: {
@@ -43,5 +39,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "100",
     fontSize: 30,
+    color: "rgb(29, 29, 29)",
   },
 });
