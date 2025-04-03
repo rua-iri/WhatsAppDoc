@@ -7,7 +7,7 @@ export default function Index() {
     <View style={styles.container}>
       <View style={styles.imageView}>
         <Image
-          source={require("../assets/icons/stethoscope.svg")}
+          source={require("../../assets/icons/stethoscope.svg")}
           style={styles.image}
         />
       </View>
