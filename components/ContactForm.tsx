@@ -1,7 +1,6 @@
 import { Picker } from "@react-native-picker/picker";
 import { Formik } from "formik";
 import {
-  Linking,
   StyleSheet,
   TextInput,
   TouchableOpacity,
@@ -12,10 +11,11 @@ import {
 import { countryCodes } from "./CountryCodesPhone";
 import { Image } from "expo-image";
 
-type SubmissionData = {
-  countryPrefix: string;
-  phoneNumber: string;
-};
+import {
+  openWhatsApp,
+  SubmissionData,
+  validateWhatsApp,
+} from "@/utils/FormHandling";
 
 export function ContactForm() {
   const countryCodeElements = countryCodes.map((elem) => (
@@ -26,34 +26,14 @@ export function ContactForm() {
     />
   ));
 
-  function sanitizeNumber(phoneNumber: string) {
-    return phoneNumber.replaceAll(" ", "");
-  }
-
-  function openWhatsApp(data: SubmissionData) {
-    const baseURL = "https://wa.me/";
-
-    if (!data.phoneNumber) {
-      return;
-    }
-
-    console.log(data);
-    data.phoneNumber = sanitizeNumber(data.phoneNumber);
-    const phoneNumberComplete = `${data.countryPrefix}${data.phoneNumber}`;
-    console.log(phoneNumberComplete);
-
-    const whatsAppURL = baseURL + phoneNumberComplete;
-    console.log(whatsAppURL);
-    Linking.openURL(whatsAppURL);
-  }
-
   return (
     <View>
       <Formik
         initialValues={{ countryPrefix: "+44", phoneNumber: "" }}
         onSubmit={(values: SubmissionData) => openWhatsApp(values)}
+        validate={(values) => validateWhatsApp(values)}
       >
-        {({ handleChange, handleBlur, handleSubmit, values }) => (
+        {({ handleChange, handleBlur, handleSubmit, values, errors }) => (
           <View>
             <View style={styles.inputContainer}>
               <Picker
@@ -72,8 +52,18 @@ export function ContactForm() {
                 value={values.phoneNumber}
                 style={styles.numInput}
                 onSubmitEditing={() => handleSubmit()}
+                placeholder="Phone Number"
               />
             </View>
+
+            <View>
+              {Object.entries(errors).map(([key, value]) => (
+                <Text key={key} style={styles.errorText}>
+                  {value}
+                </Text>
+              ))}
+            </View>
+
             <TouchableOpacity
               style={styles.submitButton}
               onPress={() => handleSubmit()}
@@ -98,7 +88,7 @@ const styles = StyleSheet.create({
     borderColor: "#202020",
     borderWidth: 2,
     borderRadius: 30,
-    padding: 2,
+    padding: 10,
     marginVertical: 5,
   },
   inputContainer: {
@@ -129,5 +119,12 @@ const styles = StyleSheet.create({
     width: 15,
     height: 15,
     color: "white",
+  },
+  errorText: {
+    color: "white",
+    backgroundColor: "rgb(255, 34, 34)",
+    textAlign: "center",
+    borderRadius: 50,
+    padding: 5,
   },
 });
