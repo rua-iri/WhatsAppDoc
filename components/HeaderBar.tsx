@@ -5,7 +5,7 @@ export function HeaderBar() {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={["rgba(41,163,56,1)", "rgba(92, 202, 94, 0.91)", "transparent"]}
+        colors={["rgb(87, 230, 104)", "rgba(159, 236, 161, 0.91)"]}
         start={{ x: 0, y: 0 }}
         end={{ x: 0, y: 1 }}
         style={[StyleSheet.absoluteFill, styles.background]}
@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     height: 50,
+    borderEndStartRadius: 25,
+    borderEndEndRadius: 25,
   },
   container: {
     position: "fixed",
@@ -40,5 +42,6 @@ const styles = StyleSheet.create({
     fontWeight: "100",
     fontSize: 30,
     color: "rgb(29, 29, 29)",
+    userSelect: "none",
   },
 });
