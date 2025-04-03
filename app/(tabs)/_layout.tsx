@@ -1,9 +1,16 @@
+import { HapticTab } from "@/components/HapticTab";
 import { FontAwesome } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "blue", headerShown: false }}>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: "rgba(3, 124, 7, 0.91)",
+        headerShown: false,
+        tabBarButton: HapticTab,
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{

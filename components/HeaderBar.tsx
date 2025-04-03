@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     width: "100%",
-    padding: 20,
     zIndex: 1,
   },
   text: {
@@ -42,6 +41,7 @@ const styles = StyleSheet.create({
     fontWeight: "100",
     fontSize: 30,
     color: "rgb(29, 29, 29)",
+    paddingTop: 10,
     userSelect: "none",
   },
 });
