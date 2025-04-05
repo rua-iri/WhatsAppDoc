@@ -18,18 +18,12 @@ export function HeaderBar() {
 
 const styles = StyleSheet.create({
   background: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
     height: 50,
     borderEndStartRadius: 25,
     borderEndEndRadius: 25,
+    paddingTop: 3,
   },
   container: {
-    position: "fixed",
-    top: 0,
-    left: 0,
     display: "flex",
     justifyContent: "center",
     width: "100%",
@@ -39,9 +33,10 @@ const styles = StyleSheet.create({
   text: {
     width: "auto",
     textAlign: "center",
-    fontWeight: "100",
-    fontSize: 30,
     color: "rgb(29, 29, 29)",
     userSelect: "none",
+    fontFamily: "SourGummy",
+    fontWeight: "200",
+    fontSize: 30,
   },
 });
