@@ -1,4 +1,6 @@
 import { Linking } from "react-native";
+import { updateData } from "./Database";
+import { HistoryEntry } from "@/app/(tabs)/history";
 
 export type SubmissionData = {
   countryPrefix: string;
@@ -24,6 +26,12 @@ export function openWhatsApp(data: SubmissionData) {
     ? (phoneNumberComplete = data.phoneNumber)
     : (phoneNumberComplete = data.countryPrefix + data.phoneNumber);
   const whatsAppURL = baseURL + phoneNumberComplete;
+
+  const historyEntry: HistoryEntry = {
+    phoneNumber: phoneNumberComplete,
+    timestamp: Date.now(),
+  };
+  updateData(historyEntry);
 
   console.log(phoneNumberComplete);
   console.log(whatsAppURL);

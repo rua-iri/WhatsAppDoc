@@ -1,17 +1,13 @@
+import { HistoryEntry } from "@/app/(tabs)/history";
 import { StyleSheet, Text, View } from "react-native";
 
-export type HistoryProps = {
-  phoneNumber: string;
-  timestamp: number;
-};
-
-export function HistoryItem({ phoneNumber, timestamp }: HistoryProps) {
+export function HistoryItem({ phoneNumber, timestamp }: HistoryEntry) {
   const date = new Date(timestamp);
 
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{phoneNumber}</Text>
-      <Text style={styles.text}>{timestamp}</Text>
+      <Text style={styles.text}>{date.toLocaleString()}</Text>
     </View>
   );
 }
