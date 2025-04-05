@@ -1,5 +1,5 @@
 import { HistoryItem } from "@/components/HistoryItem";
-import { getData } from "@/utils/Database";
+import { getData, purgeData } from "@/utils/Database";
 import { useEffect, useState } from "react";
 import { Animated, Pressable, StyleSheet, Text, View } from "react-native";
 
@@ -35,12 +35,19 @@ export default function Tab() {
         <Text style={styles.pageTitle}>App History</Text>
         <View style={styles.itemContainer}>{histItems}</View>
         <View>
-          <Pressable
-            style={styles.deleteButton}
-            onPress={() => alert("Deleting History")}
-          >
-            <Text style={styles.deleteButtonText}>Clear History</Text>
-          </Pressable>
+          {histArray ? (
+            <Pressable
+              style={styles.deleteButton}
+              onPress={() => {
+                purgeData();
+                setHistArray([]);
+              }}
+            >
+              <Text style={styles.deleteButtonText}>Clear History</Text>
+            </Pressable>
+          ) : (
+            <Text>No History Found</Text>
+          )}
         </View>
       </Animated.ScrollView>
     </View>
