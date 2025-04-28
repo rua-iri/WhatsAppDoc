@@ -1,6 +1,8 @@
 # WhatsUpDoc
 
-Remedy WhatsApp's inability to interact with those not saved in your contacts
+Remedy WhatsApp's inability to interact with those not saved in your contacts.
+
+
 
 
 
