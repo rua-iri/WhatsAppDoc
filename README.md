@@ -1,10 +1,17 @@
 # WhatsUpDoc
 
-<kbd><img src="https://github.com/user-attachments/assets/82247dd9-91a1-40c5-a017-922efdd65e22"/></kbd>
-
-Remedy WhatsApp's inability to interact with those not saved in your contacts.
 
 
+
+<div align="center">
+  <div>
+    Remedy WhatsApp's inability to interact with those not saved in your contacts.
+    </div>
+  <br/>
+  <div>
+  <kbd><img src="https://github.com/user-attachments/assets/82247dd9-91a1-40c5-a017-922efdd65e22"/></kbd>
+    </div>
+</div>
 
 
 ## Welcome to your Expo app 👋
