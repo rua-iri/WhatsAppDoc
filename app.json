@@ -10,14 +10,14 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.WhatsAppDoc"
+      "bundleIdentifier": "com.rua_iri.WhatsAppDoc"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.WhatsAppDoc"
+      "package": "com.rua_iri.WhatsAppDoc"
     },
     "web": {
       "bundler": "metro",
