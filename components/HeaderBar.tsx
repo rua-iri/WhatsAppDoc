@@ -32,12 +32,6 @@ export function HeaderBar() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    width: "100%",
-    zIndex: 1,
-  },
   maskedViewStyle: {
     flex: 1,
     flexDirection: "row",
@@ -62,5 +56,4 @@ const styles = StyleSheet.create({
     borderBottomColor: "#050505",
     opacity: 0.5,
   },
-  
 });
