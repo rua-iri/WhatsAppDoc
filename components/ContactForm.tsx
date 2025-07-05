@@ -84,7 +84,7 @@ export function ContactForm() {
 const styles = StyleSheet.create({
   numInput: {
     width: 300,
-    height: 30,
+    height: 40,
     borderColor: "#202020",
     borderWidth: 2,
     borderRadius: 30,
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   },
   multiSelect: {
     width: 300,
-    height: 40,
+    height: 60,
     marginVertical: 5,
     borderRadius: 10,
     textAlign: "center",
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 15,
     marginVertical: 20,
-    paddingVertical: 5,
+    paddingVertical: 10,
   },
   submitButtonText: {
     color: "rgb(230, 230, 230)",
