@@ -7,23 +7,8 @@ export function HeaderBar() {
     <MaskedView
       style={styles.maskedViewStyle}
       maskElement={
-        <View
-          style={{
-            backgroundColor: "transparent",
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Text
-            style={{
-              fontSize: 30,
-              color: "black",
-              fontWeight: "bold",
-            }}
-          >
-            WhatsAppDoc
-          </Text>
+        <View style={styles.textView}>
+          <Text style={styles.text}>WhatsAppDoc</Text>
         </View>
       }
     >
@@ -53,14 +38,22 @@ const styles = StyleSheet.create({
     width: "100%",
     zIndex: 1,
   },
+  maskedViewStyle: {
+    flex: 1,
+    flexDirection: "row",
+    maxHeight: 60,
+  },
+  textView: {
+    backgroundColor: "transparent",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   text: {
     width: "auto",
-    // textAlign: "center",
-    color: "rgb(29, 29, 29)",
-    userSelect: "none",
-    fontFamily: "SourGummy",
-    fontWeight: "200",
     fontSize: 30,
+    color: "black",
+    fontWeight: "400",
   },
   divider: {
     height: 0,
@@ -69,9 +62,5 @@ const styles = StyleSheet.create({
     borderBottomColor: "#050505",
     opacity: 0.5,
   },
-  maskedViewStyle: {
-    flex: 1,
-    flexDirection: "row",
-    maxHeight: 60,
-  },
+  
 });

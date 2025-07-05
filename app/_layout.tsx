@@ -10,7 +10,6 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    SourGummy: require("../assets/fonts/SourGummy-VariableFont_wdth,wght.ttf"),
   });
 
   useEffect(() => {
