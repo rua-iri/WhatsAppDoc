@@ -7,7 +7,7 @@ export default function Index() {
     <View style={styles.container}>
       <View style={styles.imageView}>
         <Image
-          source={require("../../assets/icons/stethoscope.svg")}
+          source={require("../../assets/images/whatsappdoc_logo.png")}
           style={styles.image}
         />
       </View>
@@ -23,11 +23,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 150,
   },
   imageView: {
-    padding: 25,
+    padding: 5,
     backgroundColor: "rgba(139, 233, 142, 0.62)",
     borderRadius: 500,
     marginBottom: 50,
