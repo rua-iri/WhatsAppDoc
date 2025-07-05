@@ -1,28 +1,52 @@
 import { StyleSheet, Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import MaskedView from "@react-native-masked-view/masked-view";
 
 export function HeaderBar() {
   return (
-    <View style={styles.container}>
-      <LinearGradient
-        colors={["rgb(87, 230, 104)", "rgba(159, 236, 161, 0.91)"]}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 0, y: 1 }}
-        style={[StyleSheet.absoluteFill, styles.background]}
-      >
-        <Text style={styles.text}>WhatsAppDoc</Text>
-      </LinearGradient>
-    </View>
+    <MaskedView
+      style={styles.maskedViewStyle}
+      maskElement={
+        <View
+          style={{
+            backgroundColor: "transparent",
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            style={{
+              fontSize: 30,
+              color: "black",
+              fontWeight: "bold",
+            }}
+          >
+            WhatsAppDoc
+          </Text>
+        </View>
+      }
+    >
+      {/* Shows behind the mask, you can put anything here, such as an image */}
+      <View
+        style={{
+          flex: 1,
+          height: "100%",
+          backgroundColor: "rgb(87, 230, 104)",
+        }}
+      />
+      <View
+        style={{
+          flex: 1,
+          height: "100%",
+          backgroundColor: "rgba(159, 236, 161, 0.91)",
+        }}
+      />
+    </MaskedView>
   );
 }
 
 const styles = StyleSheet.create({
-  background: {
-    height: 50,
-    borderEndStartRadius: 25,
-    borderEndEndRadius: 25,
-    paddingTop: 3,
-  },
   container: {
     display: "flex",
     justifyContent: "center",
@@ -31,12 +55,23 @@ const styles = StyleSheet.create({
   },
   text: {
     width: "auto",
-    textAlign: "center",
+    // textAlign: "center",
     color: "rgb(29, 29, 29)",
-    paddingTop: 10,
     userSelect: "none",
     fontFamily: "SourGummy",
     fontWeight: "200",
     fontSize: 30,
+  },
+  divider: {
+    height: 0,
+    marginTop: 3,
+    borderBottomWidth: 1,
+    borderBottomColor: "#050505",
+    opacity: 0.5,
+  },
+  maskedViewStyle: {
+    flex: 1,
+    flexDirection: "row",
+    maxHeight: 60,
   },
 });
