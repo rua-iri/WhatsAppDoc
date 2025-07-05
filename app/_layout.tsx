@@ -5,12 +5,12 @@ import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import { View } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [loaded, error] = useFonts({
-  });
+  const [loaded, error] = useFonts({});
 
   useEffect(() => {
     if (loaded || error) {
@@ -21,6 +21,7 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={DefaultTheme}>
       <HeaderBar />
+      <View style={{ borderWidth: 0.5, opacity: 0.5 }}></View>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>

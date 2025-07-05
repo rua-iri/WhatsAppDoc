@@ -13,20 +13,13 @@ export function HeaderBar() {
       }
     >
       {/* Shows behind the mask, you can put anything here, such as an image */}
-      <View
-        style={{
-          flex: 1,
-          height: "100%",
-          backgroundColor: "rgb(87, 230, 104)",
-        }}
-      />
-      <View
-        style={{
-          flex: 1,
-          height: "100%",
-          backgroundColor: "rgba(159, 236, 161, 0.91)",
-        }}
-      />
+      <LinearGradient
+        colors={["rgb(87, 230, 104)", "rgba(159, 236, 161, 0.91)"]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        style={[StyleSheet.absoluteFill]}
+      >
+      </LinearGradient>
     </MaskedView>
   );
 }
@@ -48,12 +41,5 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: "black",
     fontWeight: "400",
-  },
-  divider: {
-    height: 0,
-    marginTop: 3,
-    borderBottomWidth: 1,
-    borderBottomColor: "#050505",
-    opacity: 0.5,
   },
 });
