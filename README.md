@@ -16,11 +16,18 @@
 </div>
 
 
-## Welcome to your Expo app 👋
+## Install
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Download the latest release from [here](https://github.com/rua-iri/WhatsAppDoc/releases/latest).
 
-## Get started
+Once the `.apk` file has been downloaded, open it from your file explorer to install on the device.
+
+> [!NOTE]
+> This app currently only supports Android
+> Hopefully we can build for IOS soon as well
+
+
+## Development
 
 1. Install dependencies
 
